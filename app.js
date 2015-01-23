@@ -6,8 +6,9 @@ var app = express();
 app.use(morgan('dev'));
 
 // listen for port 3000;
-app.listen(3000);
-console.log('server listenning');
+app.listen(3000, function() {
+	console.log('server listenning');
+});
 
 app.get('/', function(req, res) {
 	console.log('hello!');
